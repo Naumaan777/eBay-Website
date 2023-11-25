@@ -1,0 +1,477 @@
+/*css reset*/
+*{
+  margin: 0;
+  padding: 0;
+}
+
+html{
+   scroll-behavior: smooth;
+}
+
+/*css variables*/
+:root{
+    --navbar-height:40px;
+}
+
+/*Navigation Bar*/
+#navbar{
+   display: flex;
+   align-items: center;
+   position: relative;   /* sticky */
+   height: 5.8rem;
+   top: 0px;
+}
+
+
+/*Navigation Bar:logo and Images*/
+#logo{
+    margin: 2px 0px;
+    
+}
+
+#logo img{
+    height: 85px;
+    margin: 11px 12px;
+    padding: 4px;
+    cursor: pointer;
+}
+
+/*Navigation Bar:list styling*/
+
+
+
+#navbar ul{
+    display: flex;
+    font-family: cursive;   /* font-family: "Baloo Bhai", cursive; */
+}
+
+#navbar::before{
+     content:"";
+     background-color: black;
+     position: absolute;
+     height: 100%;   
+     width: 100%;
+     top: 0px;
+     left: 0px;
+     z-index: -1;
+     opacity: 0.5;
+
+}
+
+#navbar ul li{
+    list-style: none;
+    font-size: 1.3rem;      /* relative to root eliment is rem */
+}
+
+#navbar ul li a{
+    color: white;
+    display:block;
+    padding:3px 22px;
+    border radius: 20px;
+    text-decoration: none;
+}
+
+#navbar ul li a:hover{
+    display: block;
+    color: Orange;
+    background-color: white;
+    border-radius: 19px;
+    /* border:2px solid orange; */
+   /* border: 1px solid red;
+      padding:22px 15px;
+     font-size: 18px; 
+     cursor: pointer;   */
+}
+
+#navbar ul li a.active{
+    text-decoration: underline;
+    
+    background-color: black;
+    border-radius: 24px;
+    font-size: 22px;
+     
+}
+
+/*Navigation bar: buttons*/
+#right{
+
+   position: absolute;
+   right: 14px;
+   top: 2px;
+   display: inline-block;
+ /*  border: 2px solid yellow;  */
+    
+}
+
+#right button{
+    display: block;
+    
+    margin: 3px 3px;
+    padding: 7px;
+    color: white;
+    
+    
+    font-size: 16px;
+    font-family: 'Averia Serif Libre', cursive; 
+    border: -1px solid white;  /* types of mirror color display it max size is -1 other than its not work  */
+    border-radius: 11px;
+     background-color: grey;
+    cursor: pointer;
+    */ width: 100%;  */
+    cursor: pointer;
+
+}
+
+#right button:hover{
+   
+   color: white;
+   background-color: orange;
+   border-radius:13px;
+   Text-decoration: underline;
+   border:2px solid white;
+   font-size:20px;
+}  
+
+
+#right .btn-a img{
+     height: 18px;
+    /* padding: 3px 15px;  */
+    width: 15px;
+    
+}
+
+#right .btn-a{
+    align-items: center;
+    justify-content: center;
+}
+
+/* Home Section */
+#home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 3px 200px;
+    height: 545px;
+    /*   545px;   625px;  */
+    
+
+}
+
+#home::before{ 
+     display: block;                                                  /* that is pseduo selector & that use home::before{ so image will cover naigation bar and beautyful see it */
+     content:"";
+     background: url("../wp1.png") no-repeat center center/cover;     /* double dot means css to 1 folder out in wp4 file address is defined & no repeat help to image not be printed a multiple times */
+     position: absolute;                /* So its will attach it only you have selected particular area */
+     height: 100%;   /*  725px;  */
+     width: 100%;
+     top: 0px;
+     left: 0px;
+     z-index: -1;
+     opacity: 0.80;
+
+}
+
+
+#home h1{
+      display:block;
+      color: #1e373d;     /*   #1e373d  */
+      text-align: center;
+      /* margin: auto; */
+      margin-top: 70px;
+      margin-bottom: 13px;
+      font-size: 3.7rem;
+      font-family: 'Gemunu Libre', sans-serif; 
+      text-decoration: underline;
+      
+       
+}   
+
+
+#home p{
+     color: white;
+     text-align: center;
+     margin: 5px;
+     
+     font-size:1.5rem;     
+     /*  font-family: 'Averia Serif Libre', cursive;  font-family: 'Gemunu Libre', sans-serif; */   
+    font-family: "Bree Serif", serif; 
+    cursor: pointer;
+    
+}
+
+.btn1{
+    display:block;
+    
+    padding: 15px;
+    margin: auto;  
+   
+  /*  margin-bottom: 92px;  */ 
+ /*   width: 33%; */
+    border: -3px solid white;
+    background-color: #6dd1a58f;    /* background-color: grey;  mediumaquamarine;  */ 
+    color: white;
+    font-size:1.9rem;
+    border-radius:11px;
+    cursor: pointer;
+    font-family: 'Averia Serif Libre', cursive;
+}
+
+.btn1:hover{
+    
+  /*  padding:8px 20px;
+    margin: 24px;   */
+    
+    border: 4px solid white;
+    background-color: #c39036;
+    color: white;
+    font-size:1.5rem;
+    border-radius:14px;
+    cursor: pointer;
+    
+} 
+
+
+/* services Section */
+#services-container{
+    background: cyan;
+}
+
+#services{
+    display:flex;
+    margin: 34px;
+        
+}
+
+hr{
+  margin: 3px;
+}
+
+#services .box{
+    display: inline-block;
+    position: relative;
+   /* border: 3px solid blue; */
+   /*  padding:86px;     padding:34px; */
+    margin: 24px -8px;   /* margin:3px 6px; */
+    border-radius: 10px; /* border-radius: 15px; */
+    background: repeating-linear-gradient(45deg, black, transparent 100px); /*  background:grey; */
+    padding: 4px;
+    height:550px;
+    opacity: 0.9;
+}
+
+
+
+#services .box img{
+    
+     display: block;
+    justify-content: center;
+    align-items: center;
+    height: 190px;
+    
+    border-radius: 45px;
+    cursor: zoom-in;
+    
+}
+
+#services .box p{
+    
+    font-family: 'Gemunu Libre', sans-serif;  /* font-family: 'Averia Serif Libre', cursive;  font-family: 'Gemunu Libre', sans-serif;    font-family: 'Bree Serif', serif; */
+    margin: 22px;
+    color: black;
+    border: 2px solid aqua;
+    border-radius: 11px;
+    padding: 22px;
+    background: white;
+}
+
+
+
+
+
+/* Client section */
+#client-section{
+       position: relative;
+     /*  height:355px;  */
+       
+
+}
+
+*{
+    padding: 1px;
+}
+
+#client-section::before{
+       content: "";
+       position: absolute;
+       background: url("../logo15.jpeg") no-repeat center center/cover;
+       width: 100%;
+       height: 100%; 
+       z-index: -1;
+       opacity: 0.6;
+
+}
+
+
+#clients{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+
+.client-item{
+      padding: 32px;
+     
+}
+
+#clients img{
+    display: block;
+    height: 135px;     
+    border-radius: 11px;
+    cursor: pointer;
+
+
+}
+
+
+
+/* Contact section */
+
+#contact{
+     position: relative;
+     height: 100%;
+     width:100%;
+}
+
+#contact::before{
+     display:block;
+     content:"";
+     position: absolute;
+     width: 100%;
+     height: 100%;
+     z-index: -1;
+     opacity: 0.7;
+     background: url("../cust service2.jpg") no-repeat center center/cover;
+ 
+}
+
+
+#contact-box{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     padding-bottom: 34px;
+}
+
+#contact-box input,
+#contact-box textarea{
+     width: 100%;
+     padding: 0.5rem;
+     border: 3px solid pink;
+     border-radius: 11px;
+     font-size: 1.1rem;
+     font-family: "Bree Serif", serif;
+}
+
+
+#contact-box form{
+     width: 40%;
+
+}
+
+#contact-box label{
+     font-size: 1.5rem;
+     font-family: "Bree Serif", serif;
+
+}
+
+.btn2{
+    display:block;
+    padding: 11px;
+    margin: auto;
+    margin-top: 40px;
+    border: 2px solid grey;
+    background-color: #ff6a86f5;    /* background-color: grey;  */ 
+    color: white;
+    font-size:1.6rem;
+    border-radius:11px;
+    cursor: pointer;
+    font-family: 'Averia Serif Libre', cursive;
+    width: 34%;
+}
+
+.btn2:hover{
+    
+    border: 4px solid #ff6a86f5;
+    background-color: #8080808f;
+    color: #ff6a86f5;
+    font-size:1.5rem;
+    border-radius:13px;
+    cursor: pointer;
+    
+}
+
+
+
+
+/*  footer last Slide for home Page */
+footer{
+     background: black;
+    color: white;
+    padding: 9px 20px;
+    border-radius: 7px 7px 23px 23px;
+    font-family: "Bree Serif", serif;   /*  font-family: 'Gemunu Libre', sans-serif;  font-family: "Baloo bhai", cursive;  font-family: 'Averia Serif Libre', cursive;   font-family: "Bree Serif", serif;  */
+    text-decoration: underline;
+    cursor: no-drop;
+}
+
+
+
+
+/* utility class */
+.h-primary{
+      
+     /* justify-content: center;
+      align-items: center;  */
+    /* position: absolute;
+       right: 33px;
+       left: 55px; 
+       top:22px;
+       bottom: 33px;  */
+
+      display: block;
+      padding: auto;
+      margin: auto;
+      margin-top: -1px;
+      margin-bottom: 75px;
+      font-size: 3.8rem;
+      font-family:'Bree serif', serif;
+      color: crimson;
+      text-decoration: underline;
+      /* border: 3px solid aqua; */
+      border-radius: 1px 1px 21px 23px;
+      width: 33%;
+      background-color: white;
+      cursor: pointer;
+
+}
+
+.h-secondary{
+     display: block;
+     font-size: 1.5rem;
+      padding: 25px;
+     font-family:'Bree serif', serif;
+     color: white;
+     cursor: pointer;
+     
+      
+}
+
+
+
+.center{
+   text-align: center;
+}
+

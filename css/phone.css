@@ -1,0 +1,234 @@
+/* body{
+   background-color: red;
+   }  */
+
+/*Navigation */
+#navbar{
+    
+    position: relative;    
+    flex-direction: column;  /* dont use a display: block otherwise its direction for colummn is not supported */
+    left: -2px;
+    width: 100%;
+    height: 100%;
+    /*     width: auto;  */
+   
+
+}
+
+#logo img{
+    height: 50px;   /*  45px;   */
+    margin: -8px;
+    padding: 7px;   /* 10px;  */
+}
+
+
+/*  Notes: don't use it :: before in phone style otherwise you create a big problem and is solutuion is not possiblee..so pls dont create it...  */
+/*  #navbar::before {
+      flex-direction: column;  
+      
+} */    
+
+
+
+#navbar ul li {
+    
+    font-size: 7px;   */  0.6rem;  */
+}
+
+#navbar ul li a.active {
+   
+    border-radius: 4px;
+    font-size: 7px;
+}
+
+#navbar ul li a{
+    padding: 1px 2px;
+}
+
+#right{
+    display: flex;
+    flex-direction: column;
+  /*  margin: 1px 0px 0px 952px;   */
+    
+}
+
+#right button{
+
+   margin-right: -3px;
+    padding: 4px;
+    font-size: 7px;
+    border-radius: 10px;
+}
+
+#right button:hover{
+     margin-right: -3px;
+     padding: 5px;
+     font-size: 8px;
+     border-radius: 9px; 
+
+}
+
+#right .btn-a img{
+     height: 7px;
+    
+    width: 7px;
+}
+
+/* Home Section*/
+#home{
+    /* flex-direction: column;  Alaready i would apply in css style folder */
+     height: 235px;   /*   264px;    */
+     padding: 4px 0px;
+}
+
+
+
+
+
+
+#home h1{
+    display: block;
+    position: absolute;  
+   /* margin-top: 67px;  */
+    font-size: 15px;
+    left: 11px;
+    right: 11px;
+    top: 50px;    
+   
+   
+}
+
+
+
+#home p{
+     display: block;
+     position: absolute; 
+     font-size: 9px;
+     margin-block: auto;
+     margin-bottom: -20px;                                 /*   margin: 294px 79px 240px 2px;    -38px 0px -37px -41px;   */
+    left: 14px;         /* auto;135px */
+    right: 14px;
+    
+}
+
+.btn1 {
+    display: block;
+    padding: 7px;
+  /*  margin-bottom: 10px;
+    font-size: 0.5rem;  */
+    font-size: 0.6rem;
+    margin-block: auto;
+    margin-bottom: 25px;
+   border: 1px solid white;
+    
+}
+
+.btn1:hover{
+    padding: 7px;
+    font-size: 0.7rem;
+    margin-block: auto;
+    margin-bottom: 25px;
+    border: 2px solid white;
+}
+
+/* Services section */
+hr{
+    display: block;
+    margin: auto;
+  /*  margin-top: 0px;  */
+    width: 100%;
+}
+
+#services{
+   flex-direction: column;
+
+}
+
+#services-container{
+       width: 100%;
+       margin-top: 0px;
+}
+
+#services .box{
+     padding: 14px;
+     margin: 0px -35px;
+     margin-bottom: 20px;
+     
+}
+
+#services .box img{
+    overflow: hidden;
+    height: 260px;
+    width: 232px;
+    margin: -15px;
+    border-radius: 15px;
+}
+
+
+#services .box p {
+     margin: 9px;
+}
+
+/* clients Section */
+
+#clients{
+    overflow: hidden;
+    flex-wrap: wrap;
+}
+
+#client-section{
+    width: 100%;
+}
+
+#clients img {
+    height: 87px;
+    border-radius: 50px;
+}
+
+
+/*Contactus section */
+
+#contact{
+   width: 100%;
+   height: 955px;
+}
+#contact-box form{
+    width: 80%;
+}
+
+.btn2 {
+   width: 30%;
+   padding: 5px;
+   font-size: 0.6rem;
+   border-radius: 5px;
+}
+
+
+.btn2:hover{
+     padding: 5px;
+     width: auto;
+     font-size: 0.6rem;
+     border-radius: 4px;
+}
+
+/* Footer */
+
+footer{
+   width: auto;  /*  100%;   */
+   border-radius: 2px 2px 18px 18px;
+}
+
+
+/* Utility class */
+.h-primary{
+    padding: 7px;
+    font-size: 20px;
+
+
+}
+
+.h-secondary{
+      
+      
+}
+

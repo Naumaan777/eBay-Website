@@ -1,0 +1,922 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    background-color: #f3f3f3;
+}
+
+header {
+    background-color: white;
+    width: 100%;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav {
+    width: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.logo {
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo img {
+    width: 195px;
+}
+
+.search-place {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 50%;
+}
+
+.search-place .search {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 2px solid #de2b34;
+    border-radius: 5px;
+    width: 350px;
+    padding: 5px 15px;
+}
+
+.search input {
+    width: 100%;
+    padding: 5px;
+    outline: none;
+    border: none;
+    font-size: 18px;
+}
+
+button.myAccount {
+    padding: 10px 0;
+    border: 2px solid #de2b34;
+    background-color: transparent;
+    outline: none;
+    border-radius: 5px;
+    font-size: 18px;
+    color: #de2b34;
+    cursor: pointer;
+    width: 150px;
+}
+
+button.myAccount:hover i {
+    color: #de2b34;
+}
+
+button.myAccount:hover {
+    color: #2a6496;
+}
+
+button.myCart {
+    padding: 10px 0;
+    border: 2px solid #de2b34;
+    background-color: transparent;
+    outline: none;
+    border-radius: 5px;
+    font-size: 18px;
+    color: #de2b34;
+    cursor: pointer;
+    position: relative;
+    width: 50px;
+    text-align: center;
+}
+
+button.myCart::after {
+    content: attr(data-value);
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #de2b34;
+    color: white;
+    font-size: 18px;
+}
+
+.social {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 20%;
+}
+
+.social .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+    width: 100px;
+    cursor: pointer;
+}
+
+.icon i {
+    padding: 15px;
+    border: 1px solid black;
+    border-radius: 50%;
+    font-size: 18px;
+}
+
+.icon small {
+    text-align: center;
+    font-size: 12px;
+    display: none;
+}
+
+.icon:hover i {
+    display: none;
+}
+
+.icon:hover small {
+    display: block;
+}
+
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: rgb(77, 194, 71);
+    color: white;
+    font-weight: bolder;
+    font-size: 25px;
+    padding: 10px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.4) 2px 2px 6px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+}
+
+.chat {
+    position: fixed;
+    bottom: -150px;
+    right: 20px;
+    background-color: #aa1e22;
+    ;
+    color: white;
+    font-weight: bolder;
+    font-size: 30px;
+    padding: 10px;
+    border-radius: 50%;
+    width: 65px;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.4) 2px 2px 6px;
+    transition: all .5s ease-in-out;
+    cursor: pointer;
+}
+
+footer {
+    background-color: #2a2a2a;
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    padding: 30px 10px;
+    color: white;
+    text-transform: uppercase;
+    height: 258px;
+}
+
+.column-inner {
+    display: flex;
+    gap: 50px;
+}
+
+footer h1 {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+footer p {
+    font-size: 14px;
+    margin-bottom: 3px;
+}
+
+
+.container {
+    width: 100%;
+    padding: 10px 0;
+}
+
+.main {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.left {
+    background-color: white;
+    border-radius: 5px;
+    width: 25%;
+    padding: 5px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .08);
+}
+
+.left ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.left ul li {
+    position: relative;
+    font-size: 13px;
+    color: #666666;
+    padding: 10px 5px;
+    width: 100%;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.left ul li::after {
+    content: "\f105";
+    position: absolute;
+    color: #bababa;
+    right: 10px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 10px;
+    font-family: FontAwesome;
+    transition: all .2s ease-in-out;
+}
+
+.left ul li::before {
+    content: " ";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: -105%;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.03);
+    opacity: 1;
+    transform: skew(-35deg);
+}
+
+.left ul li:hover::after {
+    color: #de2b34;
+    font-size: 11px;
+}
+
+.left ul li:hover::before {
+    animation: fade 1s linear;
+}
+
+@keyframes fade {
+    50% {
+        left: 0;
+        transform: skew(0deg);
+    }
+
+    100% {
+        left: 0;
+        opacity: 0;
+    }
+}
+
+.right {
+    width: 74%;
+    border-radius: 5px;
+    height: 425px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation: change 30s infinite;
+}
+
+@keyframes change {
+
+    0%,
+    20% {
+        background-image: url('./img/gas-12.gif');
+    }
+
+    25%,
+    45% {
+        background-image: url('https://www.symbios.pk/catalog/view/theme/default/assets/images/sliders/banar.jpg');
+    }
+
+    50%,
+    70% {
+        background-image: url('./img/HAJJ%20BANNER%20PSD%20changes%202.jpg');
+    }
+
+    75%,
+    100% {
+        background-image: url('./img/banner%20(%20C%20PANNEL%20).jpg');
+    }
+}
+
+.h {
+    display: none;
+}
+
+.deals {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.deals img {
+    width: 32%;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.latest {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.latest .leftCover {
+    width: 30%;
+    background-color: #fab633;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .08);
+}
+
+.latest .leftCover img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.latest .rightMain {
+    width: 69%;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .08);
+    /* height: 500px; */
+}
+
+.rightTop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    border-bottom: 1px solid #e3e3e3;
+    padding: 20px 20px 15px 20px;
+}
+
+.rightTop h1 {
+    font-size: 18px;
+}
+
+.rightTop i:nth-child(1) {
+    margin-right: 20px;
+}
+
+.mainLatest {
+    padding: 10px 20px 0;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+    scroll-snap-type: x mandatory;
+    overflow-x: scroll;
+    scroll-padding-block-start: 20px;
+}
+
+.mainLatest::-webkit-scrollbar {
+    width: 0px;
+}
+
+.mainProduct {
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    scroll-snap-align: start;
+    padding-left: 20px;
+    /* Add left padding to each .mainProduct element */
+}
+
+.mainProduct img {
+    width: 200px;
+    margin: 0 auto;
+    display: block;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .08);
+    height: 215px;
+    object-fit: cover;
+}
+
+.img {
+    margin: 20px 0;
+    position: relative;
+}
+
+.mainProduct span {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: white;
+    font-size: 12px;
+    font-weight: bolder;
+    background-color: #46aad7;
+    opacity: 0.8;
+}
+
+.mainProduct p {
+    color: #555;
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+    font-size: 14px;
+    white-space: normal;
+    word-break: break-all;
+
+}
+
+.mainProduct p:hover {
+    color: #de2b34;
+}
+
+.mainProduct .price {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 50px;
+}
+
+.mainProduct h1 {
+    color: #555;
+    font-weight: bolder;
+    font-size: 16px;
+}
+
+.mainProduct small {
+    font-weight: bolder;
+    color: #d3d3d3;
+    text-decoration: line-through;
+}
+
+.mainProduct button {
+    padding: 10px;
+    outline: none;
+    border: none;
+    font-weight: bolder;
+    color: white;
+    background-color: #de2b34;
+    border-radius: 5px;
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.mainProduct button:hover {
+    background-color: #1a1a1a;
+}
+
+.betweenImg {
+    width: 100%;
+    padding: 50px 0;
+    border-bottom: 1px solid #e3e3e3;
+}
+
+.betweenImg img {
+    width: 100%;
+}
+
+.featuredComp {
+    width: 100%;
+    margin: 20px 0 30px;
+}
+
+.comps {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+}
+
+.comps::-webkit-scrollbar {
+    width: 0px;
+}
+
+.comps img {
+    width: 24%;
+    scroll-snap-align: start;
+}
+
+.featuredComp h1 {
+    font-size: 26px;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.carousle {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 30px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .08);
+    scroll-snap-type: x mandatory;
+    overflow-x: scroll;
+    scroll-padding-block-start: 20px;
+    display: none;
+}
+
+.carousle::-webkit-scrollbar {
+    width: 0px;
+}
+
+.carousleItem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    scroll-snap-align: start;
+    padding-left: 20px;
+}
+
+.carousleItem img {
+    width: 70px;
+}
+
+.carousleItem small {
+    color: #666666;
+    text-align: center;
+    font-size: 12px;
+}
+
+.chatter {
+    background-color: rgb(255, 255, 255);
+    position: fixed;
+    bottom: 90px;
+    right: 0px;
+    /* padding: 15px 10px; */
+    width: 375px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px 0 rgba(0, 0, 0, .2);
+    color: black;
+    font-size: 12px;
+    font-weight: lighter;
+    overflow: hidden;
+    transition: transform .2s ease-in-out, opacity .1s ease-in-out;
+    padding: 20px;
+    opacity: 0;
+    transform: scale(0,0);
+    transform-origin: bottom right;
+}
+
+.chatter.open {
+    opacity: 1;
+    transform: scale(1,1);
+    overflow: hidden;
+}
+
+.chatter div:nth-child(1) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: black;
+    padding: 0 10px;
+    margin-bottom: 20px;
+}
+
+.chatter div:nth-child(1) img {
+    width: 65px;
+}
+
+.chatter div div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.chatter i {
+    font-size: 12px;
+}
+
+.chatter div:nth-child(1) i {
+    font-size: 14px;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: #121e21;
+    background-color: rgba(0, 0, 0, 0.04);
+    transition: all .5s ease-in-out;
+}
+.chatter div:nth-child(1) i:hover {
+    background-color: rgba(0, 0, 0, 0.06);
+}
+
+.chatter h1 {
+    font-size: 17px;
+    margin-top: 20px;
+    margin-bottom: 150px;
+    text-align: left;
+    padding-left: 10px;
+}
+
+.chat p {
+    width: 100%;
+    background-color: #aa1e22;
+    color: white;
+    padding: 12px 10px;
+    border-radius: 16px;
+    font-size: 18px;
+    font-weight: bolder;
+    margin-bottom: 20px;
+}
+.chat p:hover {
+    background-color: #a11d21;
+}
+.chatter .above ul{
+    display: flex;
+    text-align: left;
+    flex-direction: column;
+    background-color: white;
+    padding: 10px 10px 5px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, .1);
+    list-style: none;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 50px;
+    visibility: hidden;
+    opacity: 0;
+    transition: all .2s ease-in-out;
+}
+
+.chatter .above ul li{
+    margin-bottom: 5px;
+    font-size: 15px;
+}
+@media screen and (max-width: 1150px) {
+    .logo img {
+        width: 150px;
+    }
+
+    .search-place .search {
+        width: 250px;
+    }
+
+    .search input {
+        font-size: 14px;
+    }
+
+    button.myAccount {
+        width: 120px;
+        font-size: 14px;
+    }
+
+    button.myCart {
+        width: 50px;
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width:850px) {
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .logo {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .search-place {
+        margin-top: 10px;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .search-place .search {
+        width: 500px;
+    }
+
+    .search input {
+        font-size: 18px;
+    }
+
+    .social {
+        width: 100%;
+        justify-content: space-evenly;
+        margin-top: 10px;
+    }
+
+    .social .icon {
+        width: 70px;
+    }
+
+    .icon i {
+        font-size: 20px;
+        padding: 10px;
+    }
+
+    button.myAccount {
+        width: 150px;
+        padding: 13px 0;
+    }
+
+    button.myCart {
+        display: none;
+    }
+
+    nav .logo .h {
+        display: block;
+        border: none;
+        padding: 0;
+        font-size: 35px;
+    }
+
+    nav .logo .h::after {
+        display: none;
+    }
+
+    button.myAccount span {
+        display: none;
+    }
+
+    .left {
+        display: none;
+    }
+
+    .carousle {
+        display: flex;
+        margin-top: 10px;
+    }
+
+    .right {
+        width: 100%;
+        height: 200px;
+        background-size: cover;
+    }
+
+    .top {
+        align-items: center;
+    }
+
+    footer {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+    }
+
+    .column {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    footer h1 {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .column-inner {
+        justify-content: center;
+    }
+
+    .column-inner p {
+        text-align: center;
+    }
+
+    .column img {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .deals {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .deals img {
+        width: 100%;
+    }
+
+    .latest .leftCover {
+        display: none;
+    }
+
+    .latest .rightMain {
+        width: 100%;
+    }
+
+    .featuredComp h1 {
+        font-size: 18px;
+    }
+
+    .comps img {
+        width: 200px;
+    }
+
+    .sec {
+        display: none;
+    }
+
+    .c {
+        width: 100% !important;
+    }
+    .whatsapp{
+        width: 40px;
+        height: 40px;
+        font-size: 22px;
+    }
+    .chat{
+        width: 55px;
+        height: 55px;
+        font-size: 26px;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .chatter,
+    .chatter.open {
+        width: 300px;
+    }
+    .chatter div:nth-child(1) img{
+        width: 55px;
+    }
+    .chatter h1{
+        font-size: 16px;
+        margin-bottom: 100px;
+    }
+    .chatter p{
+        font-size: 14px;
+    }
+    .chatter.open {
+        padding: 15px 10px;
+    }
+}
+@media screen and (max-width:280px) {
+    .chatter,
+    .chatter.open {
+        width: 250px;
+        right: -5px;
+    }
+    .chatter.open {
+        padding: 10px;
+    }
+}

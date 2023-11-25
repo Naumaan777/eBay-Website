@@ -1,0 +1,451 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    background-color: #f3f3f3;
+}
+
+header {
+    background-color: white;
+    width: 100%;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav {
+    width: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.logo {
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo img {
+    width: 195px;
+}
+
+.search-place {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 50%;
+}
+
+.search-place .search {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 2px solid #de2b34;
+    border-radius: 5px;
+    width: 350px;
+    padding: 5px 15px;
+}
+
+.search input {
+    width: 100%;
+    padding: 5px;
+    outline: none;
+    border: none;
+    font-size: 18px;
+}
+
+button.myAccount {
+    padding: 10px 0;
+    border: 2px solid #de2b34;
+    background-color: transparent;
+    outline: none;
+    border-radius: 5px;
+    font-size: 18px;
+    color: #de2b34;
+    cursor: pointer;
+    width: 150px;
+}
+
+button.myAccount:hover i {
+    color: #de2b34;
+}
+
+button.myAccount:hover {
+    color: #2a6496;
+}
+
+button.myCart {
+    padding: 10px 0;
+    border: 2px solid #de2b34;
+    background-color: transparent;
+    outline: none;
+    border-radius: 5px;
+    font-size: 18px;
+    color: #de2b34;
+    cursor: pointer;
+    position: relative;
+    width: 50px;
+    text-align: center;
+}
+
+
+.social {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 20%;
+}
+
+.social .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+    width: 100px;
+    cursor: pointer;
+}
+
+.icon i {
+    padding: 15px;
+    border: 1px solid black;
+    border-radius: 50%;
+    font-size: 18px;
+}
+
+.icon small {
+    text-align: center;
+    font-size: 12px;
+    display: none;
+}
+
+.icon:hover i {
+    display: none;
+}
+
+.icon:hover small {
+    display: block;
+}
+
+/* siginin container starts */
+
+.signin-wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+}
+
+.signin {
+    background-color: white;
+    width: 95%;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .08);
+    padding: 50px 50px 40px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.signin-container {
+    width: 50%;
+}
+
+.signin-container h1 {
+    font-size: 36px;
+    font-weight: bolder;
+    margin-bottom: 2px;
+}
+
+.signin-container p {
+    color: #666;
+    font-size: 15px;
+}
+
+a {
+    text-decoration: none;
+    color: #de2b34;
+}
+
+.row {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin-bottom: 10px;
+}
+
+.row input {
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    outline: none;
+}
+
+.row:nth-of-type(1) {
+    margin-top: 40px;
+}
+
+.row label {
+    position: relative;
+    width: fit-content;
+    font-size: 14px;
+    color: #333;
+}
+
+.row label::after {
+    content: "*";
+    top: 0;
+    right: -15px;
+    position: absolute;
+    color: #de2b34;
+}
+
+.bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.bottom label,
+.bottom a {
+    font-size: 14px;
+}
+
+.bottom div {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.signin-container button {
+    padding: 10px 20px;
+    background-color: #de2b34;
+    outline: none;
+    border: none;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    margin-top: 50px;
+    transition: background-color .4s ease-in-out;
+    cursor: pointer;
+}
+
+.signin-container button:hover {
+    background-color: #1a1a1a;
+}
+
+footer {
+    background-color: #2a2a2a;
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    padding: 30px 10px;
+    color: white;
+    text-transform: uppercase;
+    height: 261px;
+}
+
+.column-inner {
+    display: flex;
+    gap: 50px;
+}
+
+footer h1 {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+footer p {
+    font-size: 14px;
+    margin-bottom: 3px;
+}
+.whatsapp{
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: rgb(77, 194, 71);
+    color: white;
+    font-weight: bolder;
+    font-size: 25px;
+    padding: 10px;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    border: none;
+    /* box-shadow: rgba(0, 0, 0, 0.4) 2px 2px 6px; */
+}
+.chat{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #aa1e22;;
+    color: white;
+    font-weight: bolder;
+    font-size: 30px;
+    padding: 10px;
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    border: none;
+    /* box-shadow: rgba(0, 0, 0, 0.4) 2px 2px 6px; */
+}
+
+.h{
+    display: none;
+}
+
+
+@media screen and (max-width: 1150px) {
+    .logo img {
+        width: 150px;
+    }
+
+    .search-place .search {
+        width: 250px;
+    }
+
+    .search input {
+        font-size: 14px;
+    }
+
+    button.myAccount {
+        width: 120px;
+        font-size: 14px;
+    }
+    
+    button.myCart {
+        width: 50px;
+        font-size: 14px;
+    }
+    .signin{
+        width: 100%;
+        padding: 40px 0px;
+    }
+}
+
+@media screen and (max-width:850px) {
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .logo {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .search-place {
+        margin-top: 10px;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .search-place .search {
+        width: 500px;
+    }
+    
+    .search input {
+        font-size: 18px;
+    }
+    
+    .social {
+        width: 100%;
+        justify-content: space-evenly;
+        margin-top: 10px;
+    }
+    
+    .social .icon {
+        width: 70px;
+    }
+
+    .icon i {
+        font-size: 20px;
+        padding: 10px;
+    }
+    
+    button.myAccount {
+        width: 150px;
+        padding: 13px 0;
+    }
+    
+    button.myCart {
+        display: none;
+    }
+    
+    nav .logo .h {
+        display: block;
+        border: none;
+        padding: 0;
+        font-size: 35px;
+    }
+    
+    nav .logo .h::after {
+        display: none;
+    }
+    
+    button.myAccount span {
+        display: none;
+    }
+
+    footer {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+    }
+    
+    .column {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    footer h1{
+        font-size: 16px;
+        text-align: center;
+    }
+    .column-inner{
+        justify-content: center;
+    }
+    .column-inner p{
+        text-align: center;
+    }
+    .column img{
+        display: block;
+        margin: 0 auto;
+    }
+    .signin-container{
+        width: 90%;
+    }
+    .signin-container h1{
+        font-size: 26px;
+    }
+    .signin{
+        padding: 30px 0px;
+    }
+    .signin-wrapper{
+        padding: 30px 20px;
+    }
+}
