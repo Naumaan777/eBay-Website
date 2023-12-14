@@ -1,7 +1,6 @@
 # eBay-Website
 
-
-![Uploading img_1.png…]()
+![img_1](https://github.com/Naumaan777/eBay-Website/assets/115418662/07c2cd8d-f49d-43a3-ab14-0648a914814e)
 
 
 This websites are built to connect shoppers to products or services for trading online. It's provide everything we need for online shopping, including product listings, prices, shopping carts, wholesale price, and checkout processes.
