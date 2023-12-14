@@ -1,4 +1,9 @@
 # eBay-Website
+
+
+![Uploading img_1.png…]()
+
+
 This websites are built to connect shoppers to products or services for trading online. It's provide everything we need for online shopping, including product listings, prices, shopping carts, wholesale price, and checkout processes.
 
 * Shopping cart: The shopping cart can make the buying of multiple items on eBay much easier since you can pay for all of them with a single click-through at the end of the purchase process.
