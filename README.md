@@ -18,3 +18,5 @@ This websites are built to connect shoppers to products or services for trading 
 * Favorites: You can add items to your favorites list by clicking the heart icon on the item’s listing page. This makes it easy to keep track of items you’re interested in.
 
 * Report item: If you see an item on eBay that you believe is fraudulent or violates eBay’s policies, you can report it to eBay by clicking the “Report item” link on the item’s listing page.
+
+![img_2](https://github.com/Naumaan777/eBay-Website/assets/115418662/89ee5955-64f5-4110-ab1d-90e715a7c159)
